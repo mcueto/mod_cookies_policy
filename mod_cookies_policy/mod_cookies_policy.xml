@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" client="site" method="upgrade">
+    <name>Cookies - Policies module</name>
+    <author>Marcelo Cueto</author>
+    <creationDate>Julio 2016</creationDate>
+    <copyright>Copyright (C)</copyright>
+    <license>GNU/GPL  </license>
+    <authorEmail>marcelo@marcelocueto.cl</authorEmail>
+    <authorUrl>www.marcelocueto.cl</authorUrl>
+    <version>1.0.0</version>
+    <description>
+      Show a custom text for your website visitors in order to explain that it uses cookies
+    </description>
+
+    <files>
+        <filename module="mod_cookies_policy">mod_cookies_policy.php</filename>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename>mod_cookies_policy.xml</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_cookies_policy.ini</language>
+        <language tag="es-ES">es-ES.mod_cookies_policy.ini</language>
+    </languages>
+
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+          <field
+            name="title"
+            type="textarea"
+            rows="10"
+            cols="5"
+            default= "Notice"
+            label="MOD_COOKIES_POLICY_FIELD_TITLE_LABEL"
+            description="MOD_COOKIES_POLICY_FIELD_TITLE_DESC"
+          />
+
+          <field
+            name="message"
+            type="textarea"
+            rows="10"
+            cols="5"
+            default= "We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies."
+            label="MOD_COOKIES_POLICY_FIELD_MESSAGE_LABEL"
+            description="MOD_COOKIES_POLICY_FIELD_MESSAGE_DESC"
+          />
+
+          <field
+            name="accept_button_text"
+            type="textarea"
+            rows="10"
+            cols="5"
+            default= "Accept"
+            label="MOD_COOKIES_POLICY_FIELD_BUTTON_LABEL"
+            description="MOD_COOKIES_POLICY_FIELD_BUTTON_DESC"
+          />
+
+          <field
+            name="more_button_text"
+            type="textarea"
+            rows="10"
+            cols="5"
+            default= "More info"
+            label="MOD_COOKIES_POLICY_FIELD_MORE_BUTTON_LABEL"
+            description="MOD_COOKIES_POLICY_FIELD_MORE_BUTTON_DESC"
+          />
+
+          <field
+            name="more_button_link"
+            type="textarea"
+            rows="10"
+            cols="1"
+            default= "http://www.seqlegal.com/free-legal-documents/cookies-policy"
+            label="MOD_COOKIES_POLICY_FIELD_MORE_BUTTON_LINK_LABEL"
+            description="MOD_COOKIES_POLICY_FIELD_MORE_BUTTON_LINK_DESC"
+          />
+        </fieldset>
+      </fields>
+    </config>
+</extension>
